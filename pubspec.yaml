@@ -1,0 +1,52 @@
+name: HoopHub
+description: NBA Game updates, news feed and a dedicated ChatGPT feature.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.4
+  http: ^1.2.0
+  provider: ^6.0.4
+  cached_network_image: ^3.3.1
+  url_launcher: ^6.2.4
+  flutter_native_splash: ^2.3.10 # If you want more control over the splash screen
+  flutter_bloc: ^8.0.1 # Optional, for more complex state management alongside or instead of Provider
+  shared_preferences: ^2.0.15 # For storing simple local data/preferences
+  hive: ^2.2.1 # An alternative to shared_preferences for local storage, can store complex data
+  json_serializable: ^6.1.5 # To automatically generate code for JSON serialization
+  build_runner: ^2.1.7 # Required alongside json_serializable for code generation
+  flutter_dotenv: ^5.0.2 # For managing environment variables, useful for API keys
+  webview_flutter: ^4.5.0 # If you need to display web content within your app
+  dio: ^5.4.0 # An alternative to the http package for more complex HTTP requests
+  flutter_svg: ^2.0.9 # For displaying SVG images, which might be useful for team logos or other graphics
+  flutter_local_notifications:
+
+dev_dependencies:
+  flutter_lints: ^3.0.1
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  color: "#d10b0b"
+  image: assets/images/splash_screen.png
+  color_dark: "#000000"
+  image_dark: assets/images/splash_screen.png
+  android: true
+  ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/Games1.png
+    - assets/images/HoopGPT1.png
+    - assets/images/splash_screen.png
+
